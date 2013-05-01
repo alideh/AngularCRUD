@@ -16,7 +16,11 @@ namespace AngularCRUD.Models
         public TutoringContext() : base("name=TutoringContext")
         {
         }
-
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(
+                new MigrateDatabaseToLatestVersion<TutoringContext, Migrations.Configuration>());
+        }
         public DbSet<Tutor> Tutors { get; set; }
     }
 }
