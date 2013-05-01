@@ -1,0 +1,27 @@
+﻿<h2>{{action}} Tutor</h2>
+<form name="form" class="form-horizontal">
+    <div class="control-group" ng-class="{error:form.FullName.$invalid}">
+        <label class="control-label" for="FullName">Full Name</label>
+        <div class="controls">
+            <input type="text" ng-model="item.FullName" id="FullName" name="FullName" placeholder=""/>
+        </div>
+    </div>
+    <div class="control-group" ng-class="{error:form.Age.$invalid}">
+        <label class="control-label" for="Age">Age</label>
+        <div class="controls">
+            <input type="number" ng-model="item.Age" id="Age" name="Age" placeholder=""/>
+        </div>
+    </div>
+    <div class="control-group" ng-class="{error:form.Sex.$invalid}">
+        <label class="control-label" for="Sex">Male?</label>
+        <div class="controls">
+            <input type="checkbox" ng-model="item.Sex" id="Sex" name="Sex" placeholder=""/>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button ng-click="save()" class="btn btn-primary">
+            {{action}}
+        </button>
+        <a href="#/" class="btn">Cancel</a>
+    </div>
+</form>
