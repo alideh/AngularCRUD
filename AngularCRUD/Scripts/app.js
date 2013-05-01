@@ -31,7 +31,8 @@ var EditCtrl = function($scope, $location, $routeParams, Tutor) {
     };
 };
 
-var CreateCtrl = function($scope, $location, Tutor) {
+var CreateCtrl = function ($scope, $location, Tutor) {
+    $scope.action = "Add";
     $scope.save = function () {
         
         Tutor.save($scope.item, function ()
